@@ -1,49 +1,459 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-::-webkit-scrollbar{
-    display: none;
-}
-.app{
-    width: 700px;
-    height: 70vh;
-    margin-top: 50px;
-    padding: 30px;
-    margin: 0 auto;
-    text-align: center;
-    box-shadow: inset 0px 10px 20px rgb(211, 215, 226);
-    overflow: scroll;
-}
-::placeholder{
-    color: darkgrey;
-}
-h1{
-    text-align: center;
-    font-size: 70px;
-}
-.span{
-    text-align: center;
-    font-size: 40px;
-    display: block;
+    text-decoration: none;
+    list-style: none;
 }
 button{
-    padding: 5px 15px;
-    margin: 10px;
-    color: white;
-    background-color: black;
+    cursor: pointer;
 }
-.paragraf{
-    transition: all 0.5s linear;
-    font: 900;
+::-webkit-scrollbar {
+    display: none;
+}
+
+.app {
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.logo {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #005672;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+li ,
+li a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFBFB;
+}
+li a.active {
+    border-bottom: 1px solid #FFF;
+}
+
+.home {
+    width: 100%;
+    height: auto;
+}
+
+.homesec1 {
+    width: 100%;
+    height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../public/img/homesec1bg.png);
+    background-size: cover;
+    margin-bottom: 80px;
+}
+
+.homesec1card {
+    width: 729px;
+    height: 299px;
+    padding: 30px 50px;
+    border-radius: 10px;
+    background: rgba(46, 134, 216, 0.9);
+}
+
+.homesec1card h2 {
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 87px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #FFFFFF;
+}
+
+.homesec1card p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.tillesec1 {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-bottom: 1px solid rgb(219, 215, 215);
+}
+
+.tillesec1 h2 {
+    font-weight: 400;
+    font-size: 91px;
+    text-align: center;
+    font-style: italic;
+    color: #000000;
+}
+
+.tillesec1 h5 {
+    font-weight: 400;
+    font-size: 31px;
+    text-align: center;
+    line-height: 80px;
+    color: #000000;
+}
+
+/* /////////// */
+.homesec2 {
+    padding: 50px 10%;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.homesec2 .left {
+    padding: 70px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.homesec2 .left h2 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+
+    color: #414040;
+}
+
+.homesec2 .left p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+
+    color: #414040;
+}
+
+.homesec2 .left button {
+    width: 326px;
+    height: 78px;
+    border: #005672 1px solid;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #005672;
+    font-size: 25px;
+    transition: all 0.2s ease-in;
+}
+.homesec2 .left button:hover {
+    background-color: #005672;
+    color: #fdfdfd;
+}
+
+.homesec2 .right {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.homesec2 .right img:hover {
+    transform: translate(-20px , -20px);
+    box-shadow: #414040 20px 20px 20px;
+}
+.homesec2 .right img {
+    z-index: 2;
+    width: 80%;
+    height: 80%;
+    transition: all 0.3s ease;
+}
+.homesec2 .right::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 80%;
+    height: 80%;
+    background-color: rgb(90, 89, 89);
+    z-index: 1;
+}
+
+/* //////////////// */
+.homesec3cards {
+    width: 95%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(233, 233, 233, 0.6);
+}
+
+.homesec3card {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+.homesec3card:hover .cardhover {
+    z-index: 2;
+    opacity: 1;
+}
+
+.homesec3card img {
+    width: 100%;
+    height: 100%;
+}
+
+.cardhover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(141, 138, 138, 0.757);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 50px;
+    transition: all 0.3s ease;
+}
+
+.cardhover h3 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.cardhover h2 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 33px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.quick {
+    width: 171px;
+    height: 43px;
+    border: 1px solid #FFFBFB;
+    background-color: transparent;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 25px;
+    color: #FFFBFB;
+}
+
+.quick:hover {
+    width: 171px;
+    height: 43px;
+    border: 1px solid #FFFBFB;
+    background-color: #005672;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 25px;
+    color: #FFFBFB;
+}
+
+/* ////////// */
+
+.homesec4 {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-top: 1px solid rgb(143, 142, 142);
+}
+
+.homesec4title {
+    width: max-content;
+    padding: 50px;
+    border-bottom: 1px solid rgb(136, 134, 134);
+    margin: 0 auto;
+}
+
+.homesec4title h1 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 75px;
+    text-align: center;
+    font-style: italic;
+    color: #000000;
+}
+
+.homesec4crud {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 50px 10%;
+}
+
+.homesec4crudleft {
+    width: 50%;
+    height: 400px;
+    padding: 15px;
+    background-color: rgb(180, 178, 178);
+}
+
+.homesec4crudleft img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homesec4crudright {
+    width: 45%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.homesec4crudright h3 {
+    font-weight: 600;
     font-size: 50px;
+    line-height: 75px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
 }
-.togltext{
-    font-weight: 800;
-    font-size: 55px;
-    transition: all 0.5s linear;
+.homesec4crudright h5 {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 38px;
+    /* identical to box height */
+    
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: #A5A2A2;
 }
-input{
-    padding: 15px 30px;
+.homesec4crudright p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #A5A2A2;
+}
+.sizes{
+    display: flex;
+    gap: 10px;
+}
+.sizes button{
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: #414040;
+}
+.countgroup{
+    display: flex;
+    margin: 15px;
+}
+.countgroup button{
+   padding: 10px;
+}
+.countgroup h6{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px 50px;
+   font-size: 20px;
+   background-color: rgb(247, 245, 234);
+   border-bottom: 1px solid rgb(90, 89, 89);
+ 
+}
+.addgroup {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+.addgroup button{
+   background-color: transparent;
+   height: 40px;
+   padding: 0 10px;
+   border:#005672 1px solid;
+   font-weight: 600;
+}
+.addgroup button:hover{
+   background-color:#005672;
+   color: #FFF;
+}
+.buynow{
+    padding: 10px 20px;
+    background-color: #005672;
+    color: #FFF;
+    margin: 30px 0;
+}
+.buynow:hover{  
+    background-color: #043849;
+}
+.soldcard{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+.sold{
+    padding: 10px;
+    border: #005672 1px solid;
+    color: red;
 }
