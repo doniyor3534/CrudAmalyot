@@ -1,0 +1,106 @@
+.coral{
+    width: 100%;
+    display: flex;   
+}
+.infor{
+    width: 60%;
+    margin-left: 200px;
+}
+.tm{
+    display: flex;
+    gap: 20px;
+}
+.tm img{
+    cursor: pointer;
+}
+.tm h3{
+    color: #005672;
+}
+.pay{
+    display: flex;
+    gap: 8px;
+}
+.email .emm{
+    width: 365px;
+    height: 30px;
+    border: 1px solid rgb(201, 200, 200);
+    border-radius: 4px;
+}
+.last{
+    display: flex;
+    gap: 10px;
+}
+.last input{
+    width: 175px;
+    height: 30px;
+    border: 1px solid rgb(201, 200, 200);
+    border-radius: 4px;
+}
+.address input{
+    width: 365px;
+    height: 30px;
+    border: 1px solid rgb(201, 200, 200);
+    border-radius: 4px;
+}
+.select{
+    display: flex;
+    gap: 17px;
+    
+}
+.usaa{
+    width: 110px;
+    height: 34px;
+    border: 1px solid rgb(201, 200, 200);
+    border-radius: 4px;
+}
+.select input{
+    width: 110px;
+    height: 30px;
+    border: 1px solid rgb(201, 200, 200);
+    border-radius: 4px;
+    
+}
+.phh{
+    width: 365px;
+    height: 30px;
+    border: 1px solid rgb(201, 200, 200);
+    border-radius: 4px;
+}
+.ph{
+    display: flex;
+    gap: 20px;
+}
+.ph button{
+    width: 150px;
+    height: 40px;
+    background: #005672;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.ph button:active{
+    background: #000;
+    transition: .3s ease-in-out;
+}
+.ph p{
+    color: #CBCF06;
+    cursor: pointer;
+}
+.total{
+    width: 40%;
+    background: #F5F5F5;
+    border: 1px solid black;
+    padding: 2%;
+    margin-left: -250px;
+}
+.ott{
+    width: 148px;
+    height: 139px;
+}
+.reff{
+    display: flex;
+}
+.subtotal{
+    display: flex;
+    gap: 350px;
+}
