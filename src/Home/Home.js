@@ -2,19 +2,18 @@ import React, { useContext } from 'react';
 import { DataContext } from '../DataContext/DataContext';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import { Modalcard } from '../Modal/Modal';
 
 
 
 const Home = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
+
   
-    const { datamassiv, setDatamassiv } = useContext(DataContext)
+    const { datamassiv, setDatamassiv,setModalvalue,modalcard,setModalcard } = useContext(DataContext)
+    const setModalvaluefun =(val)=>{
+        setModalcard(!modalcard)
+        setModalvalue(val)
+    }
     return (
         <div className='home'>
             <div className="homesec1">
@@ -46,7 +45,7 @@ const Home = () => {
             <div className="homesec3cards">
                 {
                     datamassiv.map((val) => (
-                        <div className="homesec3card" key={val.id}>
+                        <div className="homesec3card" key={val.id} onClick={()=>setModalvaluefun(val)}>
                             <img src={val.img} alt="" />
                             <div className="cardhover">
                                 <h3>{val.name}</h3>
@@ -119,6 +118,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Modalcard/>
         </div>
     );
 };

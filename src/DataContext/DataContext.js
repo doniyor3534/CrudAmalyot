@@ -93,9 +93,13 @@ const DataContextProvider =({children})=>{
             savat:false
         },
     ])
-    
+    const savat = datamassiv.filter((val)=>val.savat ===true)
+    const [modalvalue,setModalvalue]=useState([])
+    const [addmass,setAddmass]=useState(savat)
+    const [modalcard,setModalcard]=useState(false)
+    console.log(savat);
     return(
-        <DataContext.Provider value={{datamassiv,setDatamassiv}}>
+        <DataContext.Provider value={{datamassiv,setDatamassiv,modalvalue,setModalvalue,modalcard,setModalcard,addmass,setAddmass}}>
             {children}
         </DataContext.Provider>
     )
