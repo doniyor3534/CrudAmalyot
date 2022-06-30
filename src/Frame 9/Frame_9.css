@@ -1,0 +1,85 @@
+.free{
+    width: 100%;
+    display: flex;
+    margin-top: 200px;
+}
+.nagar{
+    width: 60%;
+    margin-left: 100px;
+}
+.mt{
+    display: flex;
+    gap: 20px;
+}
+.mt img {
+    cursor: pointer;
+}
+.mt h3{
+    color: #005672;
+}
+.ment{
+    display: flex;
+    gap: 8px;
+}
+.hari{
+    width: 700px;
+    display: flex;
+    gap: 200px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    padding: 10px;
+}
+.gar{
+    margin-left: -330px;
+}
+.ciz{
+    width: 650px;
+}
+.paid{
+    width: 700px;
+    border-radius: 10px;
+    border: 1px solid #C4C4C4;
+    padding: 10px;
+}
+.method{
+    display: flex;
+    gap: 420px;
+}
+.ret{
+    display: flex;
+    gap: 30px;
+}
+.ret button{
+    width: 150px;
+    height: 40px;
+    background: #005672;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.ret button:active{
+    background: #000;
+    transition: .3s ease-in-out;
+}
+.ret p{
+    color: #CBCF06;
+    cursor: pointer;
+}
+.suv {
+    width: 148px;
+    height: 139px;
+}
+.ches{
+    display: flex;
+}
+.canvas{
+    width: 40%;
+    background: #F5F5F5;
+    border: 1px solid black;
+    padding: 2%;
+    margin-left: -130px;
+}
+.subtotall{
+    display: flex;
+    gap: 350px;
+}
