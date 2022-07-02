@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useContext } from "react"
+import { NavLink } from "react-router-dom";
 import { DataContext } from "../DataContext/DataContext"
 
 export const Modalcard=()=>{
@@ -23,27 +24,26 @@ export const Modalcard=()=>{
          setAddbolien(true)
               setDatamassiv(datamassiv.filter((val)=>val.id ===modalvalue.id? val.savat=true:val))
               
-        console.log(addmass);
     }
    const modalopen=()=>{
     setAddbolien(true)
     setModalcard(!modalcard)
    }
     return(
-        <div className={modalcard ? "modal active" :"modal"}>
-            <div className="modalcard">
-                <div className="close" onClick={modalopen   }>x</div>
+        <div className={modalcard ? "modal1 active" :"modal1"}>
+            <div className="modalcard1">
+                <div className="close" onClick={modalopen}>x</div>
                 <div className="modalcardhead">
                     <img src={modalvalue.img} alt="" />
                     <div className="modalcardheadtitle">
                         <h2>Purple plate corals</h2>
                         <hr />
                         <p>$ {modalvalue.narx}</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, voluptatum?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis impedit explicabo voluptatum amet accusamus doloremque ducimus fuga laborum. Voluptas consectetur labore optio ad? Illum fuga ipsam accusamus, eos soluta doloribus. </p>
                         <h3>{modalvalue.name}</h3>
                         <h3>{modalvalue.size}</h3>
                         <hr />
-                        <button >VIEW FULL DETAILS</button>
+                           <NavLink to={'/shop'} >  <button onClick={modalopen   } >VIEW FULL DETAILS</button></NavLink>
                         <hr />
                     </div>
                 </div>

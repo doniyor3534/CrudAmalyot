@@ -99,7 +99,7 @@ const DataContextProvider =({children})=>{
     const [modalcard,setModalcard]=useState(false)
     console.log(savat);
     return(
-        <DataContext.Provider value={{datamassiv,setDatamassiv,modalvalue,setModalvalue,modalcard,setModalcard,addmass,setAddmass}}>
+        <DataContext.Provider value={{datamassiv,setDatamassiv,savat,modalvalue,setModalvalue,modalcard,setModalcard,addmass,setAddmass}}>
             {children}
         </DataContext.Provider>
     )

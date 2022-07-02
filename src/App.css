@@ -62,6 +62,7 @@ li a.active {
 .home {
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
 
 .homesec1 {
@@ -460,9 +461,9 @@ li a.active {
     border: #005672 1px solid;
     color: red;
 }
-.modal{
-    width: 100% !important;
-    height: 100% !important;
+.modal1{
+    width: 100% ;
+    height: 100vh;
     position: fixed;
     top:0;
     left: 0;
@@ -473,21 +474,20 @@ li a.active {
     z-index: -55;
     opacity: 0;
     transition: all 0.5s ease;
-    display: none;
 }
-.modal.active{
+.modal1.active{
     z-index: 55;
     opacity: 1;
-    display: block;
 }
-.modalcard{
+.modalcard1{
     position: relative;
-    width: 70%;
-    height: auto;
+    width: 60%;
+    height: max-content;
+    overflow: scroll;
     background-color: #FFF;
     padding: 30px;
 }
-.modalcard .close{
+.modalcard1 .close{
     position: absolute;
     top: 0;
     right: 0;
@@ -615,6 +615,7 @@ li a.active {
     }
     .homesec1{
         height: 250px;
+        overflow: hidden;
     }
     .homesec1card h2{
         font-size: 20px;
@@ -673,7 +674,7 @@ li a.active {
     .homesec4crudright h5{
         font-size: 20px;
     }
-    .modalcard{
+    .modalcard1{
         padding: 0;
     }
     .modalcardhead img{
@@ -707,11 +708,11 @@ li a.active {
 .btngroup{
     flex-direction: column;
 }
-.modalcard{
+.modalcard1{
     width: 90%;
     margin: 0 auto;
 }
-.modal{
+.modal1.active{
     height: auto;
 }
 .homesec2{

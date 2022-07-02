@@ -7,7 +7,7 @@ const Navbar = () => {
   const [burger,setBurger]=useState(false)
     return (
         <div className='nav'>
-              <button className='logo'><img src="./img/Logo.svg" alt="" /></button>
+             <NavLink to={'/'}> <button className='logo'><img src="./img/Logo.svg" alt="" /></button></NavLink>
               <MenuIcon className='burger' onClick={()=>setBurger(!burger)} />
               <ul className={burger ? 'active':''}>
                 <li  onClick={()=>setBurger(!burger)} ><NavLink to={'/'}>HOME</NavLink></li>

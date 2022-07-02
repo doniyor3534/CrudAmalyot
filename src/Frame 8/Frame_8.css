@@ -1,6 +1,7 @@
 .coral{
     width: 100%;
-    display: flex;   
+    display: flex;
+    padding: 100px 0;   
 }
 .infor{
     width: 60%;
@@ -103,4 +104,8 @@
 .subtotal{
     display: flex;
     gap: 350px;
+}
+.sizedecaration{
+    text-decoration: underline;
+    text-decoration-color: #fc0abc;
 }

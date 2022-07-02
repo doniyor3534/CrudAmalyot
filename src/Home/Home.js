@@ -3,7 +3,7 @@ import { DataContext } from '../DataContext/DataContext';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import { Modalcard } from '../Modal/Modal';
-
+import { NavLink } from 'react-router-dom'
 
 
 const Home = () => {
@@ -50,7 +50,7 @@ const Home = () => {
                             <div className="cardhover">
                                 <h3>{val.name}</h3>
                                 <h2>$ {val.narx}</h2>
-                                <button className='quick'>quick review</button>
+                                <NavLink to={'/shop'}><button className='quick' onClick={()=>setModalcard(false)}>quick review</button></NavLink>
                             </div>
                         </div>
                     ))
@@ -118,7 +118,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            {/* <Modalcard/> */}
+            <Modalcard/>
         </div>
     );
 };
